@@ -7,6 +7,8 @@
 #5 - Sair
 
 
+#Arrumar def.pomodoro()
+
 import time
 import json
 import os
@@ -46,15 +48,45 @@ def pomodoro():
                 time.sleep(1)
                 limpar_tela()
                 segundo-=1
-        global tempo_foco
-        tempo_foco += 25
+            global tempo_foco
+            tempo_foco += 25
+        except:
+                print("Digite uma opção correta!")
+                time.sleep(3)
+                limpar_tela()
+
+
         while True:
             try:
                 chc = int(input("""
                         1 - Iniciar pausa
                         2 - Voltar ao menu
                         Escolha algum: """))
-                break
+                if chc == 1:
+                    limpar_tela()
+                    input("De enter para começar a pausa")
+                    limpar_tela()
+                    while True:
+                        tempo = 1#5
+                        minuto = tempo
+                        while minuto != 0:
+                            print(f"{minuto:02d}:00")
+                            time.sleep(1)
+                            limpar_tela()
+                            segundo = 59
+                            minuto-=1
+                            while segundo !=0:
+                                print(f"{minuto:02d}:{segundo:02d}")
+                                time.sleep(1)
+                                limpar_tela()
+                                segundo-=1
+                        global tempo_pausa
+                        tempo_pausa += 5
+                
+                if chc == 2:
+                    print("Saindo...")
+                    time.sleep(2)
+                    break
             except:
                 print("Digite uma opção correta!")
                 time.sleep(3)
