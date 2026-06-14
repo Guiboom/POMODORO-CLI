@@ -57,4 +57,4 @@ Projeto desenvolvido para fins de aprendizado e prática de programação. Algum
 
 ## Autor
 
-Desenvolvido por Guilherme (Guiboom71).
+Desenvolvido por Guilherme (Guiboom).
